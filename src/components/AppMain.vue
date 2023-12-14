@@ -1,8 +1,6 @@
 <template lang="">
     <main>
-        <h1>
-            Main
-        </h1>
+           -- Content goes here --
     </main>
 </template>
 <script>
@@ -10,6 +8,18 @@ export default {
     name: "AppMain",
 }
 </script>
-<style lang="">
+<style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+    
+    main {
+        width: 1100px;
+        margin: 0 auto;
+        padding: 4rem 0;
+        color: $main-text-color;
+        @include flex(row, start, center);
+
+        font-size: .7rem;
+    }
     
 </style>
