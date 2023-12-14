@@ -2,7 +2,7 @@
     <footer>
         <section class="upper-footer">
             <section class="navigation">
-                <section class="first-col">
+                <div class="first-col">
                     <h1>
                         DC Comics
                     </h1>
@@ -22,8 +22,8 @@
                         <li>Shop DC</li>
                         <li>Shop DC Collectibles</li>
                     </ul>
-                </section>
-                <section class="second-col">
+                </div>
+                <div class="second-col">
                     <h1>
                         DC
                     </h1>
@@ -39,8 +39,8 @@
                         <li>Shop Help</li>
                         <li>Contact Us</li>
                     </ul>
-                </section>
-                <section class="third-col">
+                </div>
+                <div class="third-col">
                     <h1>
                         Sites
                     </h1>
@@ -52,7 +52,7 @@
                         <li>DC Universe</li>
                         <li>DC Power Visa</li>
                     </ul>
-                </section>
+                </div>
             </section>
             <section class="footer-logo">
                 <img src="../assets/img/dc-logo-bg.png" alt="">
@@ -126,9 +126,13 @@ footer {
             }
         }
 
-        section.footer-logo > img {
-            width: 400px;
-            overflow: hidden;
+        section.footer-logo {
+            height: 100%;
+
+            img {
+                overflow: hidden;
+                width: 400px;
+            }
         }
     }
 
