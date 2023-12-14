@@ -58,7 +58,33 @@
                 <img src="../assets/img/dc-logo-bg.png" alt="">
             </section>
         </section>
-        <section class="signup-socials"></section>
+        <section class="lower-footer">
+            <div class="wrapper">
+                <button class="sign-up">
+                    sign-up now!
+                </button>
+                <div class="socials">
+                    <div class="follow-us">
+                        Follow us
+                    </div>
+                    <div class="icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
     </footer>
 </template>
 <script>
@@ -103,6 +129,51 @@ footer {
         section.footer-logo > img {
             width: 400px;
             overflow: hidden;
+        }
+    }
+
+    section.lower-footer {
+        background-color: $footer-bg-color;
+
+        div.wrapper {
+            width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 0;
+            @include flex(row, space-between, center);
+
+            button.sign-up {
+                background-color: transparent;
+                border: 2px solid $accent;
+                color: $main-text-color;
+                font-size: .8rem;
+                font-weight: bold;
+                padding: .8rem 1.2rem;
+                text-transform: uppercase;
+
+            }
+
+            div.socials {
+                @include flex(row, end, center);
+                div.follow-us {
+                    color: $accent;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin-right: 1rem;
+
+                }
+
+                div.icon {
+                    margin-right: 1rem;
+                    color: $footer-bg-color;
+                    background-color: $small-text-color;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    @include flex(row, center, center)
+                }
+            }
+
         }
     }
 }

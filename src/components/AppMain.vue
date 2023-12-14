@@ -19,7 +19,7 @@ export default {
         color: $main-text-color;
         @include flex(row, start, center);
 
-        font-size: .7rem;
+        font-size: 1rem;
     }
     
 </style>
