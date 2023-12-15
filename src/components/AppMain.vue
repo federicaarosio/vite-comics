@@ -1,15 +1,21 @@
 <template lang="">
     <main>
            <section class="jumbo">
-           </section>
-           <section class="comics">
-                <ComicElement v-for="comic in comicsList"
-                :thumb="comic.thumb"
-                :price="comic.price"
-                :series="comic.series"
-                :type="comic.type"
-                />
-           </section>
+        </section>
+        <section class="comics">
+            <ComicElement v-for="comic in comicsList"
+            :thumb="comic.thumb"
+            :price="comic.price"
+            :series="comic.series"
+            :type="comic.type"
+            />
+            <p>Current Series</p>
+        </section>
+        <div>
+            <button>
+                load more
+            </button>
+        </div>
     </main>
 </template>
 <script>
@@ -117,7 +123,38 @@ export default {
             @include flex(row, center, stretch);
             flex-wrap: wrap;
             gap: 1rem;
+            padding-top: 4rem;
+            margin-bottom: 3rem;
+            position: relative;
+
+            p {
+                position: absolute;
+                z-index: 0;
+                left: 0;
+                top: 0;
+                transform: translate(0%, -50%); background-color: $accent;
+                color: $main-text-color;
+                padding: .5rem 1rem;
+                text-transform: uppercase;
+            }
+
         }
+
+        div {
+            text-align: center;
+            margin-bottom: 3rem;
+            
+            button {
+                text-align: center;
+                background-color: $accent;
+                color: $main-text-color;
+                padding: .5rem 3rem;
+                text-transform: uppercase;
+                font-size: .9rem;
+                font-weight: bold;
+            }
+        }
+
     }
     
 </style>
