@@ -114,8 +114,9 @@ export default {
         section.comics {
             width: 1100px;
             margin: 0 auto;
-            @include flex(row, center, center);
+            @include flex(row, center, stretch);
             flex-wrap: wrap;
+            gap: 1rem;
         }
     }
     
