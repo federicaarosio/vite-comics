@@ -1,6 +1,7 @@
 <template lang="">
     <main>
-           -- Content goes here --
+           <section class="jumbo"></section>
+           <section class="comics">Comics</section>
     </main>
 </template>
 <script>
@@ -13,13 +14,11 @@ export default {
 @use "../styles/partials/mixins" as *;
     
     main {
-        width: 1100px;
-        margin: 0 auto;
-        padding: 2rem 0;
-        color: $main-text-color;
-        @include flex(row, start, center);
-
-        font-size: 1rem;
+        section.jumbo {
+            background-image: url(../assets/img/jumbotron.jpg);
+            background-size: cover;
+            height: 20rem;
+        }
     }
     
 </style>
