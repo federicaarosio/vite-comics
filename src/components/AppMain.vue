@@ -16,10 +16,12 @@
                 load more
             </button>
         </div>
+        <AppPrefooter />
     </main>
 </template>
 <script>
 import ComicElement from './ComicElement.vue';
+import AppPrefooter from './AppPrefooter.vue';
 
 export default {
     name: "AppMain",
@@ -102,7 +104,8 @@ export default {
         }
     },
     components: {
-        ComicElement
+        ComicElement,
+        AppPrefooter
     }
 }
 </script>
