@@ -3,7 +3,12 @@
            <section class="jumbo">
            </section>
            <section class="comics">
-                <ComicElement v-for="comic in comicsList" />
+                <ComicElement v-for="comic in comicsList"
+                :thumb="comic.thumb"
+                :price="comic.price"
+                :series="comic.series"
+                :type="comic.type"
+                />
            </section>
     </main>
 </template>
